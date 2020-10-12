@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.MathUtilTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.081 s <<< FAILURE! - in com.MathUtilTest
+com.MathUtilTest.testCircleRadius  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: computes the circle area ==> expected: <31.41592653589793> but was: <314.1592653589793>
+	at com.MathUtilTest.testCircleRadius(MathUtilTest.java:21)
+
