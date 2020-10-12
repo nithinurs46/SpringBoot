@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.myBatis.mappers.StudentMapper">
+
+	<resultMap id="baseResultMap"
+		type="com.myBatis.model.Student">
+		<id column="id" property="id" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="findAll" resultMap="baseResultMap">
+		select id,name,phone,email from tbl_student
+	</select>
+	
+	<select id = "findById" parameterType = "String" resultMap = "baseResultMap">
+   		SELECT * FROM tbl_student WHERE ID = #{id}
+	</select>
+	
+	<select id = "findByMultipleParams" resultMap = "baseResultMap">
+   		SELECT * FROM tbl_student WHERE ID = #{id} and NAME = #{name}
+	</select>
+	
+	<select id="findByMapParams" parameterType="map" resultMap = "baseResultMap">
+  		select * from ${table} where id = #{criteria}
+	</select>
+</mapper>
