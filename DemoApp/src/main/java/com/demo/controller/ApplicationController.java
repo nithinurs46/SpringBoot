@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.model.Book;
+import com.demo.model.PropertiesReader;
 import com.demo.service.BookServiceHibernate;
 import com.demo.service.BookServiceSpringDataJPA;
 
@@ -24,11 +25,15 @@ import com.demo.service.BookServiceSpringDataJPA;
 public class ApplicationController {
 
 	@Autowired
+	PropertiesReader reader;
+
+	@Autowired
 	BookServiceHibernate service;
 	// BookServiceSpringDataJPA service;
 
 	@RequestMapping(value = "/test")
 	public String test() {
+		System.out.println("reader from controller:" + reader.getKey1());
 		return "Hi, spring boot works";
 	}
 
