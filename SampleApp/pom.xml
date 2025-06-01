@@ -5,4 +5,13 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>SampleApp</name>
   <description>Sample App</description>
+  
+  <distributionManagement>
+  <repository>
+    <id>github</id>
+    <name>GitHub Packages</name>
+    <url>https://maven.pkg.github.com/nithinurs46/SpringBoot</url>
+  </repository>
+</distributionManagement>
+
 </project>
