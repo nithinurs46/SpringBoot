@@ -13,9 +13,11 @@
       <url>https://maven.pkg.github.com/nithinurs46/SpringBoot</url>
     </repository>
   </distributionManagement>
+  <dependencies>
   <dependency>
   <groupId>com.sampleApp</groupId>
   <artifactId>poi</artifactId>
   <version>3.7</version>
 </dependency>
+  </dependencies>
 </project>
