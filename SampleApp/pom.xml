@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.nithinurs46</groupId>
   <artifactId>SampleApp</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <name>SampleApp</name>
   <description>Sample Spring Boot App</description>
   
