@@ -25,11 +25,11 @@ jobs:
         cp .github/settings.xml ~/.m2/settings.xml
 
     - name: Build with Maven
-      working-directory: ./DemoApp
+      working-directory: ./SampleApp
       run: mvn clean install
 
     - name: Deploy to GitHub Packages
-      working-directory: ./DemoApp
+      working-directory: ./SampleApp
       run: mvn deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
