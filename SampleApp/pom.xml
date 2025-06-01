@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com</groupId>
   <artifactId>com</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <name>SampleApp</name>
   <description>Sample Spring Boot App</description>
   
@@ -13,4 +13,9 @@
       <url>https://maven.pkg.github.com/nithinurs46/SpringBoot</url>
     </repository>
   </distributionManagement>
+  <dependency>
+  <groupId>com.sampleApp</groupId>
+  <artifactId>poi</artifactId>
+  <version>3.7</version>
+</dependency>
 </project>
