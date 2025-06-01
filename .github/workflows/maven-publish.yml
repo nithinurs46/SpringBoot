@@ -9,7 +9,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      GITHUB_ACTOR: ${{ github.actor }}
+      MAVEN_OPTS: "-Xmx1024m"
+
     steps:
+    - name: Enable GitHub Actions Debug Logging
+      run: |
+        echo "ACTIONS_RUNNER_DEBUG=true" >> $GITHUB_ENV
+        echo "ACTIONS_STEP_DEBUG=true" >> $GITHUB_ENV
+
     - name: Checkout code
       uses: actions/checkout@v4
 
@@ -24,13 +34,10 @@ jobs:
         mkdir -p ~/.m2
         cp .github/settings.xml ~/.m2/settings.xml
 
-    - name: Build with Maven
+    - name: Build with Maven (Debug)
       working-directory: ./SampleApp
-      run: mvn clean install
+      run: mvn -X clean install
 
-    - name: Deploy to GitHub Packages
+    - name: Deploy to GitHub Packages (Debug)
       working-directory: ./SampleApp
-      run: mvn deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        GITHUB_ACTOR: ${{ github.actor }}
+      run: mvn -X deploy
