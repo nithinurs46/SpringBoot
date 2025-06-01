@@ -1,0 +1,7 @@
+<servers>
+  <server>
+    <id>github</id> <!-- MUST match the pom.xml -->
+    <username>${env.GITHUB_ACTOR}</username>
+    <password>${env.GITHUB_TOKEN}</password> <!-- Injected from GitHub Secrets -->
+  </server>
+</servers>
