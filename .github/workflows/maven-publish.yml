@@ -1,8 +1,9 @@
 name: Build and Publish to GitHub Packages
 
-on: [push,workflow_dispatch]
+on:
+  push:
     branches: [ master ]
-  
+  workflow_dispatch:
 
 jobs:
   build:
