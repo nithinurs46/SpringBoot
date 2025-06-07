@@ -21,11 +21,5 @@
   </repository>
 </repositories>
 
-  <dependencies>
-  <dependency>
-  <groupId>com.sampleApp</groupId>
-  <artifactId>poi</artifactId>
-  <version>3.7</version>
-</dependency>
-  </dependencies>
+  
 </project>
